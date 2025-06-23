@@ -1,6 +1,8 @@
 import React from "react";
 import Item from "./Item";
 
+// Componente que muestra la lista de elementos
+// Recorre el array de items y renderiza un Item por cada uno
 function List({ items, deleteItem, editItem }) {
     return (
         <ul>
