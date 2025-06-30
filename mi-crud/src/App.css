@@ -1,42 +1,192 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Estilos generales del body y fuente de la aplicación */
+body {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    font-family: 'Open Sans', sans-serif; /* Asumiendo que Open Sans está importado o similar */
+    margin: 0;
+    padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Título principal de la aplicación */
+h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #343a40; /* Un color oscuro para el título */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos para la tarjeta del promedio */
+.promedio-card {
+    width: 90%; /* Porcentaje para responsividad */
+    max-width: 250px; /* Ancho máximo en pantallas grandes */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra más pronunciada */
+    border: 2px solid #0056b3; /* Borde azul más oscuro */
+    margin-bottom: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.promedio-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: #0056b3; /* Azul para el header del promedio */
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    padding: 0.7rem 1rem;
 }
 
-.card {
-  padding: 2em;
+.promedio-body {
+    font-size: 2.5rem; /* Tamaño de fuente más grande para el promedio */
+    font-weight: bold;
+    color: #0056b3; /* Color azul para el número del promedio */
+    padding: 1.5rem;
+    background-color: #e6f0fa; /* Fondo claro para el cuerpo del promedio */
+    border-radius: 0 0 10px 10px;
 }
 
-.read-the-docs {
-  color: #888;
+/* Estilos para el contenedor del formulario */
+.form-container {
+    width: 90%; /* Porcentaje para responsividad */
+    max-width: 400px; 
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+    border: 1px solid #ced4da; /* Borde más suave */
+    padding: 2rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+.form-control {
+    border-radius: 6px;
+    border: 1px solid #0056b3; /* Borde azul para los inputs */
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Estilos para el botón principal del formulario */
+.btn-primary {
+    background-color: #0056b3; 
+    border-color: #0056b3;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #003f8e; /* Un tono más oscuro al pasar el mouse */
+    border-color: #003f8e;
+}
+
+/* Estilos para la tabla */
+.responsive-table-container {
+    width: 98%; /* Más ancho que los contenedores superiores */
+    max-width: 1400px; /* Ancho máximo aún mayor para escritorio */
+    overflow-x: auto; /* Permite desplazamiento horizontal en pantallas pequeñas */
+    -webkit-overflow-scrolling: touch; /* Suaviza el scroll en iOS */
+    margin: 2rem auto; /* Margen superior y centrado */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra para la tabla */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina el espacio entre celdas */
+    /* Asegúrate de que las clases de Bootstrap como table-bordered, table-striped etc. se apliquen en el JSX */
+}
+
+th, td {
+    padding: 12px 15px; /* Espaciado dentro de las celdas */
+    text-align: center;
+    border: 1px solid #dee2e6; /* Borde de celda */
+}
+
+thead th {
+    background-color: #e9f2ff; /* Fondo para encabezados de tabla */
+    color: #0056b3; /* Color de texto para encabezados */
+    font-weight: 600;
+    border-bottom: 2px solid #b6d4fe;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Rayas para la tabla */
+}
+
+/* Estilos para los botones de acción en la tabla */
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #343a40;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Mensajes de error */
+.is-invalid {
+    border-color: #dc3545 !important; /* Borde rojo para inputs inválidos */
+}
+
+.invalid-feedback {
+    display: flex !important; /* Asegura que el mensaje de Bootstrap se muestre */
+    color: #dc3545; /* Color rojo para el texto del error */
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+    align-items: center;
+    gap: 5px; /* Espacio entre icono y texto */
+}
+
+.invalid-feedback::before {
+    content: '\26A0'; /* Icono de advertencia Unicode */
+    font-size: 1.1em;
+    display: inline-block;
+    color: #dc3545; /* Color rojo para el icono */
+}
+
+/* Media Queries para Responsividad - Ajustes Finos */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    .promedio-card,
+    .form-container {
+        width: 95%; /* Ocupan más ancho en pantallas medianas/pequeñas */
+        max-width: none; /* Eliminar el límite máximo de ancho */
+    }
+
+    .responsive-table-container {
+        width: 98%; /* La tabla ocupa casi todo el ancho */
+        max-width: none;
+    }
+
+    th, td {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .promedio-body {
+        font-size: 2rem;
+    }
+    .form-container {
+        padding: 1.5rem;
+    }
+    
 }

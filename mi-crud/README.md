@@ -1,12 +1,28 @@
-# React + Vite
+# Evaluación de Alumnos - CRUD React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Formulario para evaluación de alumnos con escala de apreciación.
 
-Currently, two official plugins are available:
+## ✨ Características principales
+- **CRUD completo:** Agrega, edita, elimina y visualiza evaluaciones de alumnos.
+- **Validaciones estrictas:** Solo se permiten letras y espacios en los campos de texto, y promedios entre 1.0 y 7.0.
+- **Persistencia:** Los datos se guardan en LocalStorage y no se pierden al recargar la página.
+- **Escala de apreciación:** Muestra una valoración visual según el promedio ingresado.
+- **Diseño moderno y responsivo:** Interfaz centrada, agradable y adaptable a cualquier dispositivo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Tecnologías utilizadas
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Bootstrap 5](https://getbootstrap.com/)
 
-## Expanding the ESLint configuration
+## 📋 Instrucciones de uso
+- Completa el formulario con el nombre del alumno, asignatura y promedio.
+- Haz clic en "Agregar Evaluación" para guardar.
+- Puedes editar o eliminar cualquier evaluación desde la lista inferior.
+- Los datos se mantienen aunque cierres o recargues la página.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 👨‍💻 Autor
+- Paulina Gallardo Garcia.
+
+---
+
+> Este proyecto cumple con los requisitos de funcionalidad, validación, persistencia y diseño solicitados para la evaluación.
